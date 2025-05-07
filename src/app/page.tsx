@@ -87,7 +87,11 @@ export default function Home() {
                 <TableCell>${(product.price / 100).toFixed(2)}</TableCell>
                 <TableCell>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="icon">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => router.push(`/update-item/${product.id}`)}
+                    >
                       <Pencil className="h-4 w-4" />
                     </Button>
                     <Button
